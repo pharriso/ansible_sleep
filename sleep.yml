@@ -1,0 +1,9 @@
+---
+
+- name: just sleep so we can watch jobs
+  hosts: all
+  gather_facts: false
+  tasks:
+  - name: pause so we can see something
+    ansible.builtin.pause:
+      seconds: "{{ pause_seconds }}"
