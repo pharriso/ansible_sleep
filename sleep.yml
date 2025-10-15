@@ -6,4 +6,4 @@
   tasks:
   - name: pause so we can see something
     ansible.builtin.pause:
-      seconds: "{{ pause_seconds }}"
+      seconds: "{{ pause_seconds | default('60') }}"
