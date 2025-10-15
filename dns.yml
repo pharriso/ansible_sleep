@@ -1,0 +1,9 @@
+---
+
+- name: pull in collection for dns lookup
+  hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: lookup redhat.com
+    ansible.builtin.debug:
+      msg: "{{ lookup('community.general.dig', 'redhat.com.')}}"
